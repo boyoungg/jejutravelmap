@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="jquery-3.6.0.min.js"></script>
+    <script src="jquery-ui.min.js"></script>
+    <script src="web.js"></script>
+</head>
+<body id="mymap" >
+    <div class="cursor"></div>
+    <div class="wrap">
+        <header>
+            <nav id="main">
+                <a href="loading.html"><img src="./img/logo.png" width="150"></a>
+                <ul class="navi">
+                    <a href="injeju.html"><li>혼자옵서!</li></a>
+                    <a href="foodtrip.html"><li>드리십서!</li></a>
+                    <a href="enjoy.html"><li>놀당갑서!</li></a>
+                    <a href="mymap.html"><li class="inPage">쉬영갑서!</li></a>
+                </ul>
+            </nav>
+        </header>
+        <div>
+            <div>
+                <img src="./img/map.png" id="mymap_bg" width="1100">
+                <h1 id="map_title"><img src="./img/map_title.png" alt=""></h1>
+                <p id="map_subtitle">제주에서 하고싶은 것을 스티커처럼 표시해보세요!</p>
+                <div id="sticker">
+                    <h3 id="jejuFood" draggable="false">MY JEJU MAP</h3>
+                    <div class="dragimg left_margin"><img src="./img/icon_1.png" alt=""></div>
+                    <div class="dragimg"><img src="./img/icon_2.png" alt=""></div>
+                    <div class="dragimg"><img src="./img/icon_3.png" alt=""></div>
+                    <div class="dragimg left_margin"><img src="./img/icon_4.png" alt=""></div>
+                    <div class="dragimg"><img src="./img/icon_5.png" alt=""></div>
+                    <div class="dragimg"><img src="./img/icon_6.png" alt=""></div>
+                    <div class="dragimg left_margin"><img src="./img/icon_7.png" alt=""></div>
+                    <div class="dragimg"><img src="./img/icon_8.png" alt=""></div>
+                    <div class="dragimg"><img src="./img/icon_9.png" alt=""></div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    $(".dragimg").draggable({
+      cursor:"move",
+      stack:".dragimg",
+      opacity:0.8
+    });
+</script>
+
+</html>

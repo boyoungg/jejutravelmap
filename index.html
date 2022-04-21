@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@100;200;300;400;500;600;700&family=Nanum+Gothic+Coding:wght@400;700&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="web.js"></script>
+</head>
+<body id="index">
+    <div class="cursor"></div>
+    <div class="wrap">
+        <header>
+            <nav id="main">
+                <a href="loading.html"><img src="./img/logo.png" width="150"></a>
+                <ul class="navi">
+                    <a href="injeju.html"><li>혼자옵서!</li></a>
+                    <a href="foodtrip.html"><li>드리십서!</li></a>
+                    <a href="enjoy.html"><li>놀당갑서!</li></a>
+                    <a href="mymap.html"><li>쉬영갑서!</li></a>
+                </ul>
+            </nav>
+        </header>
+        <section id="index_section">
+            <article>
+                <div id="title">
+                    <h1>제주, <br> <span id="point_color">놀멍놀멍</span> 봅서!</h1>
+                    <p>
+                        제주 여행을 가기 전 천천히 둘러봐요 <br>
+                        제주에는요, 산이영 바다이영 몬딱 좋은게 마씸!
+                    </p>
+                    <ul id="main_button">
+                        <a href="injeju.html"><li>혼자옵서!</li></a>
+                        <a href="mymap.html"><li>쉬영갑서!</li></a>
+                    </ul>
+                </div>
+                <div id="frame">
+                    <div id="card">
+                    </div>
+                </div>
+            </article>
+        </section>
+    </div>
+    <footer>
+        <img src="./img/logo.png" width="150" id="footerlogo">
+        <p id="footerp">
+            Jung BoYoung | b990821@kaywon.ac.kr | Kaywon Univ | Digital Media Design <br>
+            <span id="cop">Copyright 2022. Boyoung All pictures cannot be copied without permission</span>
+        </p>
+        <img src="./img/jejulogo.png" width="150" id="jejulogo">
+        </footer>
+
+        <script>
+            const frame = document.getElementById('frame')
+            const card = document.getElementById('card')
+
+            let { x, y, width, height } = frame.getBoundingClientRect()
+
+            function mouseMove(e){
+                const left = e.clientX - x 
+                const top = e.clientY - y 
+                const centerX = left - width/2
+                const centerY = top - height/2
+                const d = Math.sqrt(centerX**2 + centerY**2)
+
+                card.style.transform = `
+                rotate3d(
+                    ${-centerY / 100}, ${centerX / 100} , 0 , ${d/10}deg
+                )
+                `
+            }
+
+            frame.addEventListener('mouseenter',() => {
+                frame.addEventListener('mousemove',mouseMove)
+            })
+            
+            frame.addEventListener('mouseleave',() => {
+                frame.removeEventListener('mousemove',mouseMove)
+                card.style.transform = ''
+            })
+        </script>
+</body>
+</html>

@@ -1,0 +1,1089 @@
+/* css 초기화 코드 , 구글링 복붙했습니다. */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+@font-face {
+    font-family: 'Yeongdo-Rg';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2202-2@1.0/Yeongdo-Rg.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GangwonEdu_OTFBoldA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEdu_OTFBoldA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+/* header, footer, nav layout css */
+body{
+    font-family: 'Noto Sans KR';
+    font-weight: 200;
+    overflow-x: hidden;
+}
+.wrap{
+    margin: 0 auto;
+    width: 1440px;
+    height: 100vh; 
+}
+
+header{
+    width: 1440px;
+    height: 50px;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 50px;
+    margin-top: 20px;
+}
+
+#main img{
+    margin-top: 10px;
+    margin-left: 50px;
+}
+
+.navi{
+    color: white;
+    width: 50%;
+    float: right;
+    text-align: right;
+    margin: 5px 50px 0 0 ;
+}
+
+.navi li{
+    display: inline-block;
+    font-size: 20px;
+    padding: 12px 12px 10px 12px;
+    margin-left: 20px;
+    border-radius: 100px;
+    font-family: 'GangwonEdu_OTFBoldA';
+}
+
+.inPage{
+    background-color: #ff9f50;
+    transition: all 1s;
+}
+
+footer{
+    height: 180px;
+    /* border: 1px solid red; */
+    background-color: #3b4d59;
+}
+
+#footerlogo{
+    padding: 20px 0 20px 300px;
+    display: flex;
+
+
+}
+
+#footerp{
+    color: white;
+    border-top: solid 1px white;
+    font-size: 15px;
+    width: 500px;
+    padding: 20px 0 20px 300px;
+    line-height: 25px;
+}
+
+#cop{
+    font-size: 13px;
+}
+
+#jejulogo{
+    float: right;
+    margin: -80px 400px 0 0 ;
+}
+
+
+a:link{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+a:visited{
+    color: #ffffff;
+}
+
+a:hover{
+    color: #ff9f50;
+}
+
+
+a:active{
+    color: rgb(255, 255, 255);
+}
+
+.inPage:hover{
+    background-color: #9257de00;
+    transition: 0.5s;
+}
+
+.cursor{
+    width: 15px;
+    height: 15px;
+    border: 1px solid white;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-50%, -50%);
+    transform-origin: 100% 100%;
+    z-index: -1;
+    transition: all 0.5s ease;
+    transition-property: background, transform;
+    backdrop-filter: blur(3px);
+} 
+
+.link_hover{
+    transform: scale(5);
+    background-color: rgb(255, 255, 255);
+    border: none;
+    transform-origin: 55% 50%;
+}
+
+/* loading.html - Loading Page css*/
+.loading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    z-index: 999;
+    background-image: url(./img/loading_video.gif);
+    
+}
+.loading span{
+    display: inline-block;
+    vertical-align: middle;
+    width: 30px;
+    height: 30px;
+    background-image: url(./img/loding.png);
+    background-size: cover;
+    border-radius: 50%;
+    text-indent: -999px;
+    margin: 0 5px;
+    animation: loading 1s ease infinite;
+}
+
+.loading span:nth-child(2){
+    animation-delay: .2s;
+}
+.loading span:nth-child(3){
+    animation-delay: .4s;
+}
+.loading span:nth-child(4){
+    animation-delay: .6s;
+}
+
+@keyframes loading {
+    0%{
+        transform: translateY(0);
+    }
+
+    50%{
+        transform: translateY(10px);
+    }
+}
+
+
+
+/* index.html - Main Page css*/
+
+#index{
+    background-image: url(./img/sea.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#frame{
+    width: 700px;
+    height: 700px;
+    transition: transform 200ms;
+    border-radius: 50%;
+    float: right;
+    margin-top: -540px;
+}
+
+#frame:hover{
+    transform: scale3d(1.05, 1.05, 1.05);
+}
+
+#card{
+    width: 100%;
+    height: 100%;
+    background-image: url(./img/orange.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    transition-duration: 250ms;
+    transition-timing-function: ease-out;
+
+}
+
+#title{
+    margin-left: 60px;
+}
+
+#title h1{
+    width: 650px;
+    height: 100px;
+    color: white;
+    font-family: 'Yeongdo-Rg';
+    font-weight: 900;
+    margin-top: 160px;
+    font-size: 100px;
+    letter-spacing: 5px;
+    line-height: 130px;
+}
+
+#point_color{
+    color: #ff9f50;
+}
+
+#title p{
+    color: white;
+    padding-top: 220px;
+    padding-left: 10px;
+    line-height: 150%;
+    font-size: 25px;
+    font-family: 'GangwonEdu_OTFBoldA';
+
+}
+
+#main_button li{
+    display: inline-block;
+    padding: 15px 25px 10px 25px;
+    margin: 10px 10px 0 10px ;
+    border-radius: 50px;
+    color: #ffffff;
+    background-color: #ff9f50;
+    transition: all 1s;
+    font-family: 'GangwonEdu_OTFBoldA';
+    font-size: 20px;
+    font-weight: 600;
+
+}
+
+#main_button li:hover{
+    background-color: white;
+    transition: all 1s;
+    color: #ff9f50;
+}
+
+/* injeju.html - injenu page css*/
+#injeju{
+    background-image: url(./img/injeju.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-y: hidden;
+}
+
+#intitle{
+    position: absolute;
+    top: 130px;
+    left: 280px;
+    color: white;
+    font-family: 'GangwonEdu_OTFBoldA';
+    line-height: 30px;
+    font-size: 20px;
+}
+
+.spanOrange{
+    background-color: #ffc392;
+    padding: 10px 10px 5px 10px;
+}
+
+/* map */
+
+#map_1{
+    position: absolute;
+    top: 295px;
+    left: 1450px; 
+    filter: grayscale(80%);
+}
+
+#card_1{
+    position: relative;
+    top: 280px;
+    left: 1250px;
+    opacity: 0;
+}
+
+#map_1:hover{
+    filter: grayscale(0);
+}
+
+#map_1:hover ~ #card_1 {
+    opacity: 1;
+    transition: all 0.5s;
+}
+
+/* ------------------------ */
+
+#map_2{
+    position: absolute;
+    top: 875px;
+    left: 566px;
+    filter: grayscale(80%);
+
+}
+
+/* ------------------------ */
+
+.map_3{
+    position: absolute;
+    top: 821px;
+    left: 564px;
+    filter: grayscale(80%);
+}
+
+/* ------------------------ */
+
+.map_4{
+    position: absolute;
+    top: 477px;
+    left: 468px;
+    filter: grayscale(80%);
+}
+
+/* ------------------------ */
+
+.map_5{
+    position: absolute;
+    top: 590px;
+    left: 390px;
+    filter: grayscale(80%);
+}
+
+/* ------------------------ */
+
+.map_6{
+    position: absolute;
+    left: 692px;
+    top: 523px;
+    filter: grayscale(80%);
+}
+
+#card_6{
+    position: relative;
+    top: 650px;
+    left: 250px;
+    opacity: 0;
+    z-index: 999;
+}
+
+.map_6:hover{
+    filter: grayscale(0);
+}
+
+.map_6:hover ~ #card_6 {
+    opacity: 1;
+    transition: all 0.5s;
+}
+
+/* ------------------------ */
+
+.map_7{
+    position: absolute;
+    left: 897px;
+    top: 517px;
+    filter: grayscale(80%);
+   
+}
+
+#card_7{
+    position: relative;
+    top: 600px;
+    left: 120px;
+    opacity: 0;
+    z-index: 999;
+}
+
+.map_7:hover{
+    filter: grayscale(0);
+}
+
+.map_7:hover ~ #card_7 {
+    opacity: 1;
+    transition: all 0.5s;
+}
+
+/* ------------------------ */
+
+.map_8{
+    position: absolute;
+    left: 932px;
+    top: 474px;
+    filter: grayscale(80%);
+}
+
+#card_8{
+    position: relative;
+    top: 550px;
+    left: 0px;
+    opacity: 0;
+    z-index: 999;
+}
+
+.map_8:hover{
+    filter: grayscale(0);
+}
+
+.map_8:hover ~ #card_8 {
+    opacity: 1;
+    transition: all 0.5s;
+}
+
+/* ------------------------ */
+
+.map_9{
+    position: absolute;
+    left: 1075px;
+    top: 409px;
+    filter: grayscale(80%);
+} 
+
+
+#card_9{
+    position: relative;
+    top: 330px;
+    left: 1050px;
+    opacity: 0;
+    z-index: 999;
+}
+
+.map_9:hover{
+    filter: grayscale(0);
+}
+
+.map_9:hover ~ #card_9 {
+    opacity: 1;
+    transition: all 0.5s;
+}
+
+/* ------------------------ */
+
+.map_10{
+    position: absolute;
+    top: 351px;
+    left: 1282px;
+    filter: grayscale(80%);
+} 
+
+#card_10{
+    position: relative;
+    top: 200px;
+    left: 850px;
+    opacity: 0;
+    z-index: 999;
+}
+
+.map_10:hover{
+    filter: grayscale(0);
+}
+
+.map_10:hover ~ #card_10 {
+    opacity: 1;
+    transition: all 0.5s;
+}
+
+/* ------------------------ */
+
+.map_11{
+    position: absolute;
+    left: 1134px;
+    top: 226px;
+    filter: grayscale(80%);
+} 
+
+#card_11{
+    position: relative;
+    top: -50px;
+    left: 450px;
+    opacity: 0;
+    
+}
+
+.map_11:hover{
+    filter: grayscale(0);
+}
+
+.map_11:hover ~ #card_11 {
+    opacity: 1;
+    transition: all 0.5s;
+}
+
+/* ------------------------ */
+
+
+.map_12{
+    position: absolute;
+    left: 948px;
+    top: 245px;
+    filter: grayscale(80%);
+} 
+
+#card_12{
+    position: relative;
+    top: -50px;
+    left: -90px;
+    opacity: 0;
+    
+}
+
+.map_12:hover{
+    filter: grayscale(0);
+}
+
+.map_12:hover ~ #card_12 {
+    opacity: 1;
+    transition: all 0.5s;
+}
+
+/* ------------------------ */
+
+.map_13{
+    position: absolute;
+    left: 753px;
+    top: 282px;
+    filter: grayscale(80%);
+} 
+
+#card_13{
+    position: relative;
+    top: -120px;
+    left: 380px;
+    opacity: 0;
+    z-index: 999;
+}
+
+.map_13:hover{
+    filter: grayscale(0);
+}
+
+.map_13:hover ~ #card_13 {
+    opacity: 1;
+    transition: all 0.5s;
+}
+
+/* ------------------------ */
+.map_14{
+    position: absolute;
+    left: 595px;
+    top: 339px;
+    filter: grayscale(80%);
+} 
+
+#card_14{
+    position: relative;
+    top: -80px;
+    left: -150px;
+    opacity: 0;
+    
+}
+
+.map_14:hover{
+    filter: grayscale(0);
+}
+
+.map_14:hover ~ #card_14 {
+    opacity: 1;
+    transition: all 0.5s;
+}
+
+/* ------------------------ */
+
+.map_15{
+    position: absolute;
+    left: 577px;
+    top: 548px;
+    filter: grayscale(80%);
+} 
+
+#card_15{
+    position: relative;
+    top: 350px;
+    left: -200px;
+    opacity: 0;
+    
+}
+
+.map_15:hover{
+    filter: grayscale(0);
+}
+
+.map_15:hover ~ #card_15 {
+    opacity: 1;
+    transition: all 0.5s;
+}
+
+/* ------------------------ */
+
+.map_16{
+    position: absolute;
+    left: 492px;
+    top: 405px;
+    filter: grayscale(80%);
+} 
+
+#card_16{
+    position: relative;
+    top: 0;
+    left: -900px;
+    opacity: 0;
+    
+}
+
+.map_16:hover{
+    filter: grayscale(0);
+}
+
+.map_16:hover ~ #card_16 {
+    opacity: 1;
+    transition: all 0.5s;
+}
+
+/* ------------------------ */
+
+.map_17{
+    position: absolute;
+    left: 435px;
+    top: 520px;
+    filter: grayscale(80%);
+} 
+
+#card_17{
+    position: relative;
+    top: -40px;
+    left: -80px;
+    opacity: 0;
+    
+}
+
+.map_17:hover{
+    filter: grayscale(0);
+}
+
+.map_17:hover ~ #card_17 {
+    opacity: 1;
+    transition: all 0.5s;
+}
+
+/* ------------------------ */
+
+.map_18{
+    position: absolute;
+    left: 430px;
+    top: 614px;
+    filter: grayscale(80%);
+}
+
+#card_18{
+    position: relative;
+    top: 200px;
+    left: -360px;
+    opacity: 0;
+    
+}
+
+.map_18:hover{
+    filter: grayscale(0);
+}
+
+.map_18:hover ~ #card_18 {
+    opacity: 1;
+    transition: all 0.5s;
+}
+
+/* ------------------------ */
+    
+
+
+/* foodtrip.html - foodtrip page css*/
+#food{
+    background-color: #b2dbea;
+    background-repeat: no-repeat;
+    background-size: cover;
+  
+}
+
+aside{
+    width: 200px;
+    height: 390px;
+    margin-top: 20px;
+    position: fixed;
+    background-color: rgba(255, 255, 255, 0.473);
+    border-radius: 10px;
+    /* border: 1px solid red; */
+}
+
+aside > h4{
+    color: white;
+    font-family: 'GangwonEdu_OTFBoldA';
+    border-bottom: 1px solid #ff9f50;
+    padding: 20px 10px 15px 10px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+    background-color: #ff9f50;
+    border-radius: 10px 10px 0 0;
+}
+
+aside > ul{
+    float: left;
+}
+
+.foodSection{
+    height: 1500px;
+}
+
+
+.linkblock{
+    border-bottom: solid 1px #ff9f503b;
+    width: 180px;
+    padding: 15px 0 15px 15px;
+    color: #72727283;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.selet{
+    border-left: 5px solid #ff9f50;
+    border-radius: 0 10px 10px 0;
+    background-color: white;
+    color: #ff9f50;
+}
+
+.food_article{
+    width: 1210px;
+    height: 500px;
+    display: block;
+    float: right;
+    margin-top: 20px;
+}
+
+.food_article img{
+    border-radius: 10px 0 0 10px;
+    margin-left: 10px;
+}
+
+.food_article h2{
+    color: #ff831e;
+    font-size: 20px;
+    font-weight: 400;
+    width: 300px;
+    padding: 10px 10px 5px 10px;
+    margin: 0 auto;
+    margin-top: 50px;
+    border-radius: 50px;
+    background-color: white;
+    text-align: center;
+    font-family: 'GangwonEdu_OTFBoldA';
+}
+
+.linkblock:link{
+    color: #616161;
+}
+
+
+.linkblock:visited{
+    color: #616161;
+}
+
+.linkblock:hover{
+    color: #ff9f50;
+}
+
+.linkblock:active{
+    color: #616161;
+}
+
+.best_food{
+    margin-top: 40px;
+    padding-left: 22px;
+}
+
+.food_list li{
+    display: inline-block;
+    text-align: left;
+
+    margin-top: 20px;
+    color: #616161;
+    font-size: 15px;
+    line-height: 150%;
+}
+
+.foodMargin{
+    margin-right: 162px;
+
+}
+
+.foodMargin_1{
+    margin-right: 192px;
+
+}
+.foodMargin_2{
+    margin-right: 150px;
+
+}
+
+.mainText{  
+    font-size: 20px;
+    color: #616161;;
+    font-weight: 500;
+    
+}
+
+.video_food{
+    margin-top: 30px;
+}
+
+
+.video_food li{
+    display: inline;
+    padding-left:80px;
+}
+
+
+
+/* enjoy.html - enjoy page css*/
+#enjoy{
+    background-image: url(./img/enjoy.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+table, td{
+    padding: 0 15px 30px 15px;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.enjoy_box{
+    padding: 15px 15px 30px 15px;
+    background-color: rgba(255, 255, 255, 0.521);
+    border-radius: 10px;
+}
+
+
+.enjoy_box:hover{
+    background-color: rgba(255, 255, 255, 0.877);
+}
+
+.enjoy_box img{
+    /* padding: 10px; */
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.enjoy_text{
+    font-weight: 700;
+    font-size: 20px;
+    color: rgb(29, 29, 29);
+}
+
+#enjoy_title{
+    margin: 25px 0 0 75px;
+}
+
+
+
+.sub{
+    font-size: 13px;
+    padding-top: 10px;
+    line-height: 150%;
+}
+
+.container{
+    margin: 0 auto;
+    width: 1270px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.container img{
+    padding-bottom: 20px;
+}
+
+.container p{
+    font-family: 'GangwonEdu_OTFBoldA';
+    color: white;
+    font-size: 20px;
+    line-height: 25px;
+    padding-bottom: 30px;
+
+}
+
+ul.tabs li{
+  display: inline-block;
+	background: #ffffff91;
+	color: rgb(56, 56, 56);
+	padding: 15px 15px 5px 15px;
+	cursor: pointer;
+    border-radius: 10px 10px 0 0 ;
+    font-family: 'GangwonEdu_OTFBoldA';
+}
+
+ul.tabs li.current{
+	background: #ff9f50;
+	color: white;
+    font-weight: 500;
+}
+
+.tab-content{
+    display: none;
+	background: #ff9f50;
+	padding: 12px;
+    border-radius: 0 10px 10px 10px;
+    
+}
+
+.tab-content.current{
+	display: inherit;
+}
+
+.tab-content.current h1{
+    font-weight: 500;
+    font-size: 23px;
+    padding-left: 15px;
+    margin: 15px 0 25px 0;
+    border-left: solid 3px white;
+    color: white;
+}
+
+.tab-content.current li{
+    width: 500px;
+    padding: 10px 0 5px 20px;
+    border-radius: 50px;
+    margin-bottom: 10px;
+    margin-left: 40px;
+    background-color: white;
+    font-size: 18px;
+    font-weight: 500;
+    color: #ff9f50;
+    font-family: 'GangwonEdu_OTFBoldA';
+    display: inline-block;
+}
+
+.tab-content.current li > span{
+    font-size: 15px;
+    font-weight: 200;
+    color: #747474;;
+}
+
+
+/* mymap.html - mymap page css */
+#mymap{
+    background-image: url(./img/food.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+#mymap_bg{
+    margin: 100px 0 0 0;
+    float: left;
+}
+
+#sticker{
+    float: right;
+    /* border: solid 1px blue; */
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.493);
+    width: 300px;
+    height: 450px;
+    margin: 0 0 0 20px;
+    box-shadow: 5px 5px 5px 5px #47557023;
+    
+}
+
+#map_title{
+    
+    width: 300px;
+    float: right;
+    margin-top: 50px;
+    text-align: center;
+    
+}
+
+#map_subtitle{
+    font-family: 'GangwonEdu_OTFBoldA';
+    width: 300px;
+    float: right;
+    margin: 10px 0 5px 0;
+    text-align: center;
+    color: white;
+}
+
+.dragimg{
+    width: 80px;
+    height: 80px;
+    background-size: cover;
+    float: left;
+    margin: 15px 8px 15px 8px;
+}
+
+#item{
+    background-image: url(./img/icon_1.png);
+    background-size: contain;
+}
+
+.left_margin{
+    margin-left: 18px;
+    
+}
+
+#jejuFood{
+    color: #ff9f50;
+    font-family: 'IBM Plex Sans KR', sans-serif;
+    font-weight: 900;
+    font-size: 20px;
+    width: 50%;
+    margin: 0 auto;
+    margin-bottom: 15px;
+    padding: 20px 0 10px 0;
+    text-align: center;
+    border-bottom: 2px solid #ff9f50;
+}
+
+
+
